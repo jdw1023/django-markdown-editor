@@ -223,6 +223,14 @@
                 }
             }
 
+            if (editorConfig.collab == 'true') {
+                try {
+                    enable_collab(editorId);
+                } catch (e) {
+                    console.log("Collab lib doesn't installed.");
+                }
+            }
+
             // win/linux: Ctrl+B, mac: Command+B
             var markdownToBold = function (editor) {
                 var originalRange = editor.getSelectionRange();
